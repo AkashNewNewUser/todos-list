@@ -6,44 +6,44 @@ import Todos from "./Todos";
 import Footer from "./Footer";
 import Second from "./secondmethodprops";
 import Navbar from "./navbar";
-import {createBrowserRouter,RouterProvider} from 'react-router-dom';
-import Home from './Home';
-import Login from './login';
+// import {createBrowserRouter,RouterProvider} from 'react-router-dom';
+// import Home from './Home';
+// import Login from './login';
 import Counter from './Counter'; 
-import Services from './Services'; 
+// import Services from './Services'; 
 import React,{ useState } from 'react';
 // import Toggle from './Toggle';
 // import Form from './Form';
 import About from './About';
 function App() {
   const [mode,setMode]=useState('light');
-  const router=createBrowserRouter([
-    {
-        path:"/Home",
-        element:<Home/>
-    },
-    {
-        path:"/login",
-        element:<Login/>
-    },
-    {
-      path:"/Services",
-      element:<Services/>
-  },
+  // const router=createBrowserRouter([
+  //   {
+  //       path:"/Home",
+  //       element:<Home/>
+  //   },
+  //   {
+  //       path:"/login",
+  //       element:<Login/>
+  //   },
+  //   {
+  //     path:"/Services",
+  //     element:<Services/>
+  // },
     // {
     //   path:"/TextForm",
     //   element:<TextForm/>
     // }
-    {
-      path:"/Counter",
-      element:<Counter/>
-  },
-  {
+  //   {
+  //     path:"/Counter",
+  //     element:<Counter/>
+  // },
+  // {
     // path:"/Form",
     // element:<Form/>
-}
+// }
 
-])
+// ])
 const toggleMode = ()=>{
   if(mode==='light'){
     setMode('dark');
@@ -60,7 +60,7 @@ const toggleMode = ()=>{
       {/* This will use defaultProps from Header */}
       {/* <Header /> */}
       <Navbar mode={mode} toggleMode={toggleMode}/>
-      <RouterProvider router={router}/>
+      {/* <RouterProvider router={router}/> */}
 
       <Todos />
       
